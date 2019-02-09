@@ -34,7 +34,7 @@ pipeline {
         }
         stage('Lint') {
             steps {
-                sh "${WORKSPACE}/node_modules/.bin/tslint -c ./tslint.json \"src/**/*.ts\" --format junit --out jslint-test-results.xml"
+                sh "npm run lint-junit"
             }
         }
         stage('Deploy') {
