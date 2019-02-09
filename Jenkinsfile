@@ -29,7 +29,7 @@ pipeline {
         stage('Build Angular') {
             steps {
                 sh "npm install"
-                sh "ng build --prod --verbose --base-href ${params.BASE_REF}"
+                sh "npm run build-prod -- --verbose --base-href ${params.BASE_REF}"
             }
         }
         stage('Lint') {
