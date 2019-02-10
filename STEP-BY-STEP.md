@@ -25,3 +25,9 @@ $ npm install -g @angular/cli
 ```
 ng new amphibian7 --service-worker
 ```
+
+* Turn app into progressive web app
+
+```
+ng add @angular/pwa --project amphibian7
+```
