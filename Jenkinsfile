@@ -37,6 +37,11 @@ pipeline {
                 sh "npm run lint-junit"
             }
         }
+        stage('Compodoc') {
+            steps {
+                sh "npm run compodoc"
+            }
+        }
         stage('Deploy') {
             steps {
                 sh "mkdir -p ${params.WEB_ROOT}"
@@ -47,6 +52,14 @@ pipeline {
         stage('Results') {
             steps {
                 junit allowEmptyResults: true, testResults: '**/jslint-test-results.xml'
+                publishHTML (target: [
+                      allowMissing: true,
+                      alwaysLinkToLastBuild: false,
+                      keepAll: true,
+                      reportDir: 'documentation',
+                      reportFiles: 'index.html',
+                      reportName: "Compodoc"
+                    ])
             }
         }
     }

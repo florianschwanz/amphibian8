@@ -9,6 +9,7 @@
     "test": "ng test",
     "lint": "ng lint",
     "lint-junit": "./node_modules/.bin/tslint -c ./tslint.json \"src/**/*.ts\" --format junit --out jslint-test-results.xml",
+    "compodoc": "compodoc -p tsconfig.json",
     "e2e": "ng e2e"
   },
   "private": true,
