@@ -31,3 +31,9 @@ ng new amphibian7 --service-worker
 ```
 ng add @angular/pwa --project amphibian7
 ```
+
+* Enable Angular Material
+
+```
+npm install --save @angular/material @angular/cdk @angular/animations
+```
