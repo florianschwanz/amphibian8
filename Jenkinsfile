@@ -32,14 +32,29 @@ pipeline {
                 sh "npm run build-prod -- --verbose --base-href ${params.BASE_REF}"
             }
         }
+        stage('Test') {
+            steps {
+                sh "npm run test"
+                junit allowEmptyResults: true, testResults: 'reports/**/test-results.xml'
+            }
+        }
         stage('Lint') {
             steps {
                 sh "npm run lint-junit"
+                junit allowEmptyResults: true, testResults: 'reports/**/lint-results.xml'
             }
         }
         stage('Compodoc') {
             steps {
                 sh "npm run compodoc"
+                publishHTML (target: [
+                  allowMissing: true,
+                  alwaysLinkToLastBuild: false,
+                  keepAll: true,
+                  reportDir: 'reports/documentation',
+                  reportFiles: 'index.html',
+                  reportName: "Compodoc"
+                ])
             }
         }
         stage('Deploy') {
@@ -47,19 +62,6 @@ pipeline {
                 sh "mkdir -p ${params.WEB_ROOT}"
                 sh "rm -rf ${params.WEB_ROOT}/*"
                 sh "cp -R ${WORKSPACE}/dist/amphibian7/* ${params.WEB_ROOT}"
-            }
-        }
-        stage('Results') {
-            steps {
-                junit allowEmptyResults: true, testResults: '**/jslint-test-results.xml'
-                publishHTML (target: [
-                      allowMissing: true,
-                      alwaysLinkToLastBuild: false,
-                      keepAll: true,
-                      reportDir: 'documentation',
-                      reportFiles: 'index.html',
-                      reportName: "Compodoc"
-                    ])
             }
         }
     }
