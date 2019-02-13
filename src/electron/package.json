@@ -1,0 +1,5 @@
+{
+  "name": "lymbo",
+  "version": "0.0.0",
+  "main": "electron.ts"
+}

@@ -61,7 +61,7 @@ pipeline {
             steps {
                 sh "mkdir -p ${params.WEB_ROOT}"
                 sh "rm -rf ${params.WEB_ROOT}/*"
-                sh "cp -R ${WORKSPACE}/dist/amphibian7/* ${params.WEB_ROOT}"
+                sh "cp -R ${WORKSPACE}/dist/* ${params.WEB_ROOT}"
             }
         }
     }

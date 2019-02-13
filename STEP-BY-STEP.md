@@ -37,3 +37,12 @@ ng add @angular/pwa --project amphibian7
 ```
 npm install --save @angular/material @angular/cdk @angular/animations
 ```
+
+* Enable Electron
+
+```
+npm install --save-dev electron
+npm install --save-dev electron-builder
+npm install --save-dev electron-packager
+npm install --save-dev @types/node
+```
