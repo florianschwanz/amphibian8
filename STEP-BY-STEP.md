@@ -46,3 +46,9 @@ npm install --save-dev electron-builder
 npm install --save-dev electron-packager
 npm install --save-dev @types/node
 ```
+
+* Enable Cordova
+
+```
+npm install --save-dev cordova
+```
