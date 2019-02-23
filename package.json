@@ -24,7 +24,8 @@
     "cordova-android-prepare": "cd ./cordova && cordova platform remove android && cordova platform add android",
     "cordova-android": "cd ./cordova && cordova build android --debug",
     "cordova-android-prod": "cd ./cordova && cordova build android --release",
-    "cordova-android-start": "npm run cordova-android && cd ./cordova && cordova emulate android"
+    "cordova-android-start": "npm run cordova-android && cd ./cordova && cordova emulate android",
+    "release-notes": "mkdirp ./release && markdown ./src/releasenotes/release-notes-%npm_package_version%.md > release/release-notes-%npm_package_version%.html"
   },
   "private": true,
   "dependencies": {
@@ -66,6 +67,7 @@
     "karma-jasmine": "~1.1.2",
     "karma-jasmine-html-reporter": "^0.2.2",
     "karma-junit-reporter": "^1.2.0",
+    "markdown-to-html": "0.0.13",
     "protractor": "~5.4.0",
     "ts-node": "~7.0.0",
     "tslint": "^5.11.0",
