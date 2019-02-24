@@ -45,6 +45,7 @@ yarn-error.log
 testem.log
 /typings
 /release
+/cordova
 
 # System Files
 .DS_Store
