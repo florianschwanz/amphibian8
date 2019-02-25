@@ -9,7 +9,7 @@
     "test": "ng test --reporters junit --code-coverage",
     "lint": "ng lint",
     "lint-junit": "./node_modules/.bin/tslint -c ./tslint.json \"src/**/*.ts\" --format junit --out reports/lint-results.xml",
-    "compodoc": "compodoc -p tsconfig.json --output reports/documentation/",
+    "compodoc": "compodoc src/app -p tsconfig.json --output reports/documentation/",
     "e2e": "ng e2e",
     "electron-build": "ng build --base-href ./ && cd ./src/electron && copyfiles ./* ./../../dist/",
     "electron-build-prod": "ng build --prod --base-href ./ && cd ./src/electron && copyfiles ./* ./../../dist/",
