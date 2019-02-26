@@ -1,14 +1,13 @@
 import {NgModule} from '@angular/core';
-import {CommonModule} from '@angular/common';
 import {StartComponent} from './pages/start/start.component';
-import {StartRoutingModule} from './start-routing.module';
+import {StartImports} from './start.imports';
+import {StartProviders} from './start.providers';
 
 @NgModule({
   declarations: [StartComponent],
-  imports: [
-    CommonModule,
-    StartRoutingModule
-  ], entryComponents: [
+  imports: [StartImports],
+  providers: [StartProviders],
+  entryComponents: [
     StartComponent
   ], exports: [
     StartComponent

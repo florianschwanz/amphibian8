@@ -1,5 +1,4 @@
 import {Component, OnInit} from '@angular/core';
-import {NotificationService} from '../../../../core/notification/services/notification.service';
 
 /**
  * Displays start page
