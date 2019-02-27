@@ -1,3 +1,3 @@
-/** Providers of start component */
+/** Providers of start module */
 export const StartProviders =  [
 ];
