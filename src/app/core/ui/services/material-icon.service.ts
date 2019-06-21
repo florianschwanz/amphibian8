@@ -1,6 +1,6 @@
 import {Injectable} from '@angular/core';
 import {DomSanitizer} from '@angular/platform-browser';
-import {MatIconRegistry} from '@angular/material';
+import {MatIconRegistry} from '@angular/material/icon';
 
 /**
  * Represents icon topic subdirectory
