@@ -35,8 +35,20 @@ export class NotificationService {
    * @param icon icon name
    */
   public displayNotification(title: string, text: string, icon: string) {
+
+    console.log(`title ${title}`);
+    console.log(`text ${text}`);
+    console.log(`icon ${icon}`);
+
     if (Notification.permission === 'granted') {
+      console.log(`navigator ${JSON.stringify(navigator)}`);
+      console.log(`navigator.serviceWorker ${JSON.stringify(navigator.serviceWorker)}`);
+      console.log(`navigator.serviceWorker.getRegistration() ${JSON.stringify(navigator.serviceWorker.getRegistration())}`);
+
       navigator.serviceWorker.getRegistration().then((reg) => {
+
+        console.log(`reg ${JSON.stringify(reg)}`);
+
         const options = {
           body: text,
           icon: 'assets/icons/' + icon,

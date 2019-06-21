@@ -23,13 +23,13 @@ $ npm install -g @angular/cli
 * Initialize project
 
 ```
-ng new amphibian7 --service-worker
+ng new amphibian8 --service-worker
 ```
 
 * Turn app into progressive web app
 
 ```
-ng add @angular/pwa --project amphibian7
+ng add @angular/pwa --project amphibian8
 ```
 
 * Enable Angular Material

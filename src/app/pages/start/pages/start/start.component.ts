@@ -12,7 +12,7 @@ import {NotificationService} from '../../../../core/notification/services/notifi
 export class StartComponent implements OnInit {
 
   /** App title */
-  title = 'amphibian7';
+  title = 'amphibian8';
 
   //
   // Lifecycle hooks

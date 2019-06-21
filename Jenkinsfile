@@ -17,7 +17,7 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                git url: 'git@github.com:florianschwanz/amphibian7.git', branch: 'master'
+                git url: 'git@github.com:florianschwanz/amphibian8.git', branch: 'master'
             }
         }
         stage('Init submodules') {
